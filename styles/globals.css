@@ -1,0 +1,19 @@
+/* Styling file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style for the body element */
+body {
+  @apply bg-zinc-900 h-full overflow-x-hidden;
+}
+
+/* Style for the #_next element */
+#__next {
+  @apply h-full;
+}
+
+/* Style for the html element */
+html {
+  @apply h-full;
+}
