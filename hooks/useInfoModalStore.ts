@@ -1,3 +1,5 @@
+// hook en el que se abre el modal
+
 import { create } from 'zustand';
 
 export interface ModalStoreInterface {

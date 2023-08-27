@@ -1,3 +1,5 @@
+// Componente de la pantalla que contiene el vídeo default que se está reproduciendo
+
 import React, { useCallback } from 'react';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
@@ -5,10 +7,12 @@ import PlayButton from '@/components/PlayButton';
 import useBillboard from '@/hooks/useBillboard';
 import useInfoModalStore from '@/hooks/useInfoModalStore';
 
+// Se inicializa una variable con la información de la película
 const Billboard: React.FC = () => {
   const { openModal } = useInfoModalStore();
   const { data } = useBillboard();
 
+  // Se inicializa la variable con el vídeo
   const handleOpenModal = useCallback(() => {
     openModal(data?.id);
   }, [openModal, data?.id]);
@@ -26,6 +30,7 @@ const Billboard: React.FC = () => {
           {data?.description}
         </p>
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
+          {/* Aquí se define la funcionalidad cuando se selecciona el botón play. En ese caso, se abre el modal de la película (handleOpenModal) */}
           <PlayButton movieId={data?.id} />
           <button
             onClick={handleOpenModal}

@@ -1,3 +1,5 @@
+// Componente del botón de play
+
 import React from 'react';
 import { PlayIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/router';
@@ -11,6 +13,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
 
   return (
     <button 
+    // Aquí se define la funcionalidad de que cuando se clique, se vea la película seleccionada
       onClick={() => router.push(`/watch/${movieId}`)}
       className="
         bg-white 

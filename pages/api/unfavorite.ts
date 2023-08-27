@@ -1,3 +1,5 @@
+// Esta es la funcionalidad para quitar una película de favoritos
+
 import { NextApiRequest, NextApiResponse } from "next";
 import prismadb from '@/lib/prismadb';
 

@@ -1,3 +1,5 @@
+// Componente del botón de agregar a favoritos
+
 import axios from 'axios';
 import React, { useCallback, useMemo } from 'react';
 import { PlusIcon, CheckIcon } from '@heroicons/react/24/outline';
@@ -10,6 +12,7 @@ interface FavoriteButtonProps {
 }
 
 const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
+  
   const { mutate: mutateFavorites } = useFavorites();
 
   const { data: currentUser, mutate } = useCurrentUser();
@@ -20,6 +23,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
     return list.includes(movieId);
   }, [currentUser, movieId]);
 
+  // Aquí se introduce la funcionalidad del botón de favoritos, donde se declara una variable llamada toggleFavorites, donde se puede añadir una película a favoritos o quitarla
   const toggleFavorites = useCallback(async () => {
     let response;
 
@@ -41,6 +45,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
   const Icon = isFavorite ? CheckIcon : PlusIcon;
 
   return (
+    // Aquí se llama a la variable toggleFavorites cuando se clique al botón
     <div onClick={toggleFavorites} className="cursor-pointer group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
       <Icon className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" />
     </div>

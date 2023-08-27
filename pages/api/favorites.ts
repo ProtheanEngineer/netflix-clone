@@ -1,3 +1,5 @@
+// Aquí está la funcionalidad para extraer las películas que tiene un usuario en favoritos
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 import prismadb from '@/lib/prismadb';

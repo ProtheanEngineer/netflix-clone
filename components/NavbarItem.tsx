@@ -1,3 +1,5 @@
+// Componente de los apartados del header
+
 import React from 'react';
 
 interface NavbarItemProps {

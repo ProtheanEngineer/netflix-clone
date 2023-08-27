@@ -1,3 +1,5 @@
+// Este es el menú desplegable con todas las categorías del header en la vista móvil
+
 import React from 'react';
 
 interface MobileMenuProps {

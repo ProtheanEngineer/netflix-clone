@@ -1,3 +1,5 @@
+// Componente de modal de información cuando se hace clic a los detalles de una película
+
 import React, { useCallback, useEffect, useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -38,21 +40,26 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
         <div className={`${isVisible ? 'scale-100' : 'scale-0'} transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md`}>
 
           <div className="relative h-96">
+            {/* Aquí está el vídeo de la película seleccionada con el volumen muteado */}
             <video poster={data?.thumbnailUrl} autoPlay muted loop src={data?.videoUrl} className="w-full brightness-[60%] object-cover h-full" />
+            {/* Aquí está el botón de cerrar el modal de información */}
             <div onClick={handleClose} className="cursor-pointer absolute top-3 right-3 h-10 w-10 rounded-full bg-black bg-opacity-70 flex items-center justify-center">
               <XMarkIcon className="text-white w-6" />
             </div>
             <div className="absolute bottom-[10%] left-10">
+              {/* Aquí está el título de la película */}
               <p className="text-white text-3xl md:text-4xl h-full lg:text-5xl font-bold mb-8">
                 {data?.title}
               </p>
               <div className="flex flex-row gap-4 items-center">
+                {/* Aquí está el botón de play */}
                 <PlayButton movieId={data?.id} />
+                {/* Aquí está el botón de añadir a favoritos */}
                 <FavoriteButton movieId={data?.id} />
               </div>
             </div>
           </div>
-
+          {/* Aquí esta la información como la duración, el género y la descripción de la película */}
           <div className="px-12 py-8">
             <div className="flex flex-row items-center gap-2 mb-8">
               <p className="text-green-400 font-semibold text-lg">

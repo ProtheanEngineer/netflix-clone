@@ -1,19 +1,19 @@
-/* Styling file */
+/* Este es el archivo de estilo CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Style for the body element */
+/* Estilo para el elemento body */
 body {
   @apply bg-zinc-900 h-full overflow-x-hidden;
 }
 
-/* Style for the #_next element */
+/* Estilo para el elemento _next */
 #__next {
   @apply h-full;
 }
 
-/* Style for the html element */
+/* Estilo para el elemento html */
 html {
   @apply h-full;
 }

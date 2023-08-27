@@ -1,3 +1,5 @@
+// Este es el componente del modal que se ve cuando se hace hover en una película
+
 import React, { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -49,6 +51,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:translate-x-[2vw]
         group-hover:opacity-100
       ">
+        {/* Aquí esta la funcionalidad de que cuando se clique sobre la imagen, se redireccione a ver la película seleccionada */}
         <img onClick={redirectToWatch} src={data.thumbnailUrl} alt="Movie" draggable={false} className="
           cursor-pointer
           object-cover
@@ -70,11 +73,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           shadow-md
           rounded-b-md
           ">
+            {/* Lo mismo con el botón play */}
           <div className="flex flex-row items-center gap-3">
             <div onClick={redirectToWatch} className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300">
               <PlayIcon className="text-black w-4 lg:w-6" />
             </div>
+            {/* Aquí cuando se seleccione el botón de favoritos, se añadirá o se quitará de favoritos */}
             <FavoriteButton movieId={data.id} />
+            {/* Aquí se añade la funcionalidad de ver detalles de la película */}
             <div onClick={() => openModal(data?.id)} className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300">
               <ChevronDownIcon className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" />
             </div>

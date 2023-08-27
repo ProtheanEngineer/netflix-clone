@@ -1,3 +1,5 @@
+// Esta es la pantalla de autentificación
+
 // importar paquetes
 import axios from 'axios';
 import { useCallback, useState } from 'react';

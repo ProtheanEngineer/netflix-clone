@@ -1,3 +1,5 @@
+// hook en el que se llama a la función "useBillboard", con la que se revalida la información en el Billboard
+
 import useSwr from 'swr'
 import fetcher from '@/lib/fetcher';
 

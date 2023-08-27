@@ -1,3 +1,5 @@
+// hook el cual te recoge las películas de la bbdd
+
 import useSwr from 'swr'
 import fetcher from '@/lib/fetcher';
 

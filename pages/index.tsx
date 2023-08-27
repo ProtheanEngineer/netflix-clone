@@ -1,3 +1,5 @@
+// Esta es la pantalla home
+
 import React from 'react';
 import { NextPageContext } from 'next';
 import { getSession } from 'next-auth/react';
@@ -28,6 +30,7 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Home = () => {
+  // Se extraen las películas y las películas en favoritos
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();
   const {isOpen, closeModal} = useInfoModalStore();

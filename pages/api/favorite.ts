@@ -1,3 +1,5 @@
+// Aquí está la funcionalidad para poner una película en la lista de favoritos
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { without } from "lodash";
 

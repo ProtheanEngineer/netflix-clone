@@ -1,3 +1,5 @@
+// Esta es la funcionalidad para poner una película de default reproduciéndose
+
 import { NextApiRequest, NextApiResponse } from "next";
 import prismadb from '@/lib/prismadb';
 import serverAuth from "@/lib/serverAuth";
@@ -9,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     await serverAuth(req, res);
-
+// Aquí cuenta las películas que hay en la bbdd, y coge una random
     const moviesCount = await prismadb.movie.count();
     const randomIndex = Math.floor(Math.random() * moviesCount);
 

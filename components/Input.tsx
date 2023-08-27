@@ -1,8 +1,8 @@
-// This is the input component
+// Botón de input con el que se hace la autentificación por correo electrónico
 
 import React from 'react';
 
-// We define the InputProps parameters
+// Definimos los parámetros de input
 interface InputProps {
   id: string;
   onChange: any;

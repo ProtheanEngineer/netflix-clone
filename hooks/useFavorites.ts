@@ -1,3 +1,5 @@
+// hook en el que se define la variable useMovies, la cual extrae las películas en favoritos
+
 import useSwr from 'swr'
 import fetcher from '@/lib/fetcher';
 

@@ -1,3 +1,5 @@
+// hook que contiene la función de "UseCurrentUser", con la que obtiene información del usuario loggeado
+
 import useSwr from 'swr'
 
 import fetcher from '@/lib/fetcher';

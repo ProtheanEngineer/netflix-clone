@@ -1,3 +1,5 @@
+// Aquí está la funcionalidad para ver qué usuario está conectado
+
 import { NextApiRequest, NextApiResponse } from "next";
 import serverAuth from "@/lib/serverAuth";
 
